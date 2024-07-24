@@ -14,20 +14,21 @@ function showSubjects() {
 }
 
 function addSubject() {
- while (newSubject != 'stop') {
-  let newSubject = prompt ('What subject would you like to add')
-  // add a new item to the end of the subjects array
+  let newSubject = ''
+  while (newSubject != 'stop') {
+  newSubject = prompt ('What subject would you like to add')
+  if (newSubject != 'stop') {
   subjects.push(newSubject)
+  }
 } 
-
-
 }
 
 function removeSubject() {
-  let index = prompt ('Select an index that you wish to remove from the list. The first is numebered 0, the second is 1, the third is 2, and so forth.')
-
-  // remove 1 item at the index position of the subjects array
-  subjects.splice(index, 1)
+  let index = prompt ('Select an index that you wish to remove from the list.' )
+  let arraylength = subjects.length
+  if (index >= 0 && index <= arraylength) {
+    subjects.splice(index, 1)
+  } else {
+    let = prompt ('That is an invalid numberm The Array goes from 0 to ' + arraylength + 'moving down the list')
+  }
 }
-
-
