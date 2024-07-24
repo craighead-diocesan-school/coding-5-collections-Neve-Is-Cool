@@ -9,9 +9,6 @@ let subjects = [
   'Geography',
 ]
 
-
-
-
 function showSubjects() {
   alert(subjects)
 }
