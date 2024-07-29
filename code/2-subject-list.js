@@ -8,11 +8,17 @@ let subjects = [
   'Science',
   'Geography',
 ]
+let subjectList = ''
+let count = 0
 
 function showSubjects() {
   //Outputs the newest version of the list of subjects
-  alert(subjects)
-}
+  while (count<subjects.length) {
+  subjectList = subjectList + subjects[count] + ', '
+  count = count + 1
+  }
+  alert(subjectList)
+} 
 
 function addSubject() {
   //Asks the user which subject they would like to add, adds the subjects then continues asking until the user says 'stop'.
@@ -25,22 +31,19 @@ function addSubject() {
   } 
 }
 
-const minNumber = 0
-const removesItem = 1
 
 function removeSubject() {
   //Asks the user which index they would like to remove and either removes it, or if an invalid number is entered, it suggests to the user how the array works.
-  const dumbPeopleArrayList = 1
   showSubjects()
   let index = prompt ('Type the number in the list that you wish to remove' )
-  index = index - dumbPeopleArrayList
-  let arraylength = subjects.length
-  if (index >= minNumber && index <= arraylength) {
-    subjects.splice(index, removesItem)
+  let arrayLength = subjects.length
+  index = Number (index)
+  index = index - 1
+
+
+  if (index >= 0 && index <= arrayLength) {
+    subjects.splice(index, 1)
     } else {
     let = prompt ('That is an invalid numberm The Array goes from 0 to ' + arraylength + 'moving down the list')
   }
 }
-
-
-//What I have to do: Add spaces after commas; make it like attendees list.
