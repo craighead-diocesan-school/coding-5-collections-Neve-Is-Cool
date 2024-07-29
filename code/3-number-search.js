@@ -19,7 +19,7 @@ function searchNumbers() {
   let searchResult = false
 
   for (let currentNumber of numberArray) {
-    //Finds whether the currentNumber is within the array.
+    //Finds whether the number they selected is within the array.
     if (currentNumber == searchTarget) {
       searchResult = true
     }
